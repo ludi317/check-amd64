@@ -14,7 +14,7 @@ Higher `v` values give better performance, on a smaller number of targets. See t
    
 
 ### Example
-My 2016 MacBook Pro has v3 microarchitecture support, but not 
+My MacBook Pro (Retina, 15-inch, Mid 2015) has v3 microarchitecture support, but not 
 v4. I can set `GOARCH=amd64 GOAMD64=v3` for  better performance.
 ```bash
 $ ./v1 
