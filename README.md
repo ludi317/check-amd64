@@ -7,10 +7,10 @@ Higher `v` values give better performance, on a smaller number of targets. See t
 
 ### Steps
 1. Clone this repo onto a machine which has go installed.
-2. cd into the repo's src directory (`cd check-amd64/src`)
-3. Run the bash script. Pass in the target `GOOS` (default is linux): `bash all.bash [GOOS]`
-4. The `check_amd64_bins` directory should now have 4 binaries. Copy `check_amd64_bins` to your target.
-5. cd into `check_amd64_bins` and run `./v1`. The output indicates which `GOAMD64` values will create working binaries on your target. 
+2. cd into the repo (`cd check-amd64`)
+3. Run `make`. Optionally pass in the target `GOOS` (default is linux): eg, `make GOOS=darwin`
+4. The `build/check_amd64_bins` directory should now have 4 binaries. Copy the `check_amd64_bins` directory to your target.
+5. cd into `check_amd64_bins` and run `./v1`. The output indicates which `GOAMD64` values will create working binaries for your target. 
    
 
 ### Example
