@@ -1,9 +1,10 @@
 This tool tells you what to set `GOAMD64` to. 
 
 `GOAMD64` is an optional go environment variable that can be set alongside `GOARCH=amd64`. 
-It takes one of 4 possible values: `v1`,`v2`, `v3`, and `v4`. 
+It takes one of 4 possible values: `v1`,`v2`, `v3`, and `v4`, corresponding to microarchitecture levels. 
 The default, `v1`, generates a working binary for all `GOARCH=amd64`targets, but is the least performant. 
-Higher `v` values give better performance, on a smaller set of targets. See the official [documentation](https://github.com/golang/go/wiki/MinimumRequirements#microarchitecture-support) for more details.
+Higher `v` values give better performance using newer instructions, on a smaller set of targets that can support them. 
+See the official [documentation](https://github.com/golang/go/wiki/MinimumRequirements#microarchitecture-support) for more details.
 
 This tool works by compiling binaries for v1 through v4, and running each one. Go checks at startup whether the requested microarchitecture level is supported.
 
