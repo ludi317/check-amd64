@@ -18,7 +18,7 @@ These binaries were built with go version `go1.21.5`.
 
 ### Build your own binaries
 1. Clone this repo onto a machine which has go installed.
-2. cd into the repo (`cd check-amd64`)
+2. cd into the repo (`cd check-amd64-level`)
 3. Run `make`. Optionally pass in the target `GOOS` (default is linux): eg, `make GOOS=darwin`. The `build/check_amd64_bins` directory should now have 4 binaries. 
 4. Copy the `check_amd64_bins` directory to your target, if necessary. 
 5. cd into `check_amd64_bins` and run `./v1`.
