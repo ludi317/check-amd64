@@ -8,15 +8,7 @@ See the official [documentation](https://github.com/golang/go/wiki/MinimumRequir
 
 This tool works by compiling binaries for v1 through v4, and running each one. Go checks at startup whether the requested microarchitecture level is supported.
 
-### Run prebuilt linux binaries
-1. Copy the `check_linux_amd64_bins` directory to your target.
-2. cd into `check_linux_amd64_bins` and run `./v1`.
-
-The output indicates which `GOAMD64` values will create working binaries for your target.
-Checksums of the binaries can be verified against the `checksum.txt` file. 
-These binaries were built with go version `go1.21.5`. 
-
-### Build your own binaries
+### Steps
 1. Clone this repo onto a machine which has go installed.
 2. cd into the repo (`cd check-amd64-level`)
 3. Run `make`. Optionally pass in the target `GOOS` (default is linux): eg, `make GOOS=darwin`. The `build/check_amd64_bins` directory should now have 4 binaries. 
